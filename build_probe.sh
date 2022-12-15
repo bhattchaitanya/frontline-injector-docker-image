@@ -12,12 +12,12 @@ java_version=$(docker run --rm "$base_image" java -version 2>&1 | awk -F '"' '/v
 
 docker build \
   --build-arg=base_image="$base_image" \
-  -t gatlingcorp/classic-openjdk-x86:"$java_version" \
+  -t bhattchaitanya/classic-openjdk-x86:"$java_version" \
   .
 
 docker tag \
-  gatlingcorp/classic-openjdk-x86:"$java_version" \
-  gatlingcorp/classic-openjdk-x86:"$java_major"
+  bhattchaitanya/classic-openjdk-x86:"$java_version" \
+  bhattchaitanya/classic-openjdk-x86:"$java_major"
 
-docker push gatlingcorp/classic-openjdk-x86:"$java_version"
-docker push gatlingcorp/classic-openjdk-x86:"$java_major"
+docker push bhattchaitanya/classic-openjdk-x86:"$java_version"
+docker push bhattchaitanya/classic-openjdk-x86:"$java_major"
