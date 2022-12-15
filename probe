@@ -8,7 +8,7 @@ export DAEMON=cat
 USER=frontline
 HOME=$ROOT_PATH/home/probe
 
-# hello blah2
+# hello blah3
 # Create a frontline user with current uid if needed
 if ! whoami &> /dev/null; then
   if [ -w /etc/passwd ]; then
